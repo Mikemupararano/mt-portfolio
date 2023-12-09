@@ -1,0 +1,113 @@
+:root {
+  --color1:#a53860;
+  -color2: #fdf0d5;
+  --color3: #001d3d;
+  --color4: #000814;
+  --color5: #43291f;
+  --color6: #003566;
+  --color7:#226f54;
+  --color8:#457b9d;
+  --color9: #00f5d4;
+  --color10: white;
+  --color11:#1282a2;
+  --color12:#03aad7;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--color1);
+  background-image: url(../images/balancing-rocks.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+  font-size: 62.5%;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  background: var(--color6);
+  color: var(--color10);
+  height: 80px;
+  font-size: 20px;
+  }
+  #header {
+    background: var(--color12);
+    height:60px;
+    margin-top:10px;
+    width: 200px;
+    padding-left:50px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+  }
+      .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    }
+  .nav-link {
+    text-decoration: none;
+    font-display: flex;
+    position: relative;
+    margin: auto 0;
+   margin-right: 20px;
+   margin-left: 20px;
+   color:var(--color10);
+   right:-900px;
+   }
+   .nav-link {
+    text-decoration: underline var(--color12);
+   }
+  .cool-header {
+    margin-top: 0;
+    display: flex;
+    position:relative;
+    right: -1200px;
+  font-size: 40px;
+  color: var(--color1);
+  }
+//h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color9);
+}
+
+
+p {
+  margin: 0;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left:30px;
+  display: block;
+  height: 500px;
+  width: 200px;
+  color:var(--color10);
+  font-size: 20px;
+}
+.left-side-heading {
+  display: flex;
+  justify-content: space-between;
+  height: 130px;
+  border-right: 2px solid var(--color10);
+  }
+  .page-section-contact {
+    display: flex;
+    flex-direction: column;
+   }
+   .contact-me {
+    color: var(--color10);
+    text-decoration: none;
+   }
