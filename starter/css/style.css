@@ -19,6 +19,7 @@
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  max-width: 100%;
   
       }
       html, body {
@@ -65,52 +66,49 @@ color:var(--color10);
     align-items: center;
     color: var(--color10);
 }
-.image-div {about-me;
+.my-photo {
+    position:relative;
     grid-area:photo;
-    width: 100%;
+    width: 10%;
+    top: 10px;
+    height:80%;
+    margin-left: 20px;
    
 }
 .me-and-cool-title-wrapper {
-    background-image: url(./images/02-hero-bg.jpg);
+    background-image: url(../images/02-hero-bg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    height: 250px;
 }
 .cool-title-div {
     color: var(--color1);
     font-size: 20px;
 }
-/*Styling about me section that contains an h2 title and a paragraph about me
-.about-me-wrapper {
-    background: var(--color1);
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    font-size: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: var(--color10);
-    width: 100%;
-    font-size: 15px;
-    }*/
-    .cool-header {
-        grid-area: cool-title;
-        background-image: url(../images/02-hero-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+   .cool-header {
+    position: relative;
+    color: var(--color1);
+    right: -1200px;
+    top:-100px;
     }
-    .image-div {
-        grid-area: photo;
-    }
-    .about-me {
+        .about-me {
         grid-area: me-side-title;
         font-size: 10px;
         color: var(--color10);
         padding-left: 10px;
         border-right: 2px solid var(--color10);
     }
+    .about-me-side-header {
+        grid-area: me-title;
+    }
     .about-me-para {
+        position: relative;
         grid-area: para;
         color:var(--color10);
+        padding-left: 210px;
+        top:-35px;
+        margin-top: 0;
+
         }
        
 .projects-header {
@@ -126,6 +124,7 @@ color:var(--color10);
     }
 #project3 {
     grid-area: project3;
+    width: 25%;
 }
 #project4 {
     grid-area: project4;
@@ -145,7 +144,7 @@ main {
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
     'photo photo photo cool-title cool-title'
-    'me-side-title para para para para'
+    'me-title para para para para'
     'work-header project1 project1 project2 project2'
     'project3 project3 project4 project4'
     ;
