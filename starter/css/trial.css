@@ -38,7 +38,7 @@ align-items: center;
 padding-left: 20px;
 padding-right: 20px;
 height: 60px;
-max-width: 1200px;
+max-width: 100%;
 }
 /*styling nav bar link*/
 .nav-link {
@@ -65,15 +65,12 @@ color:var(--color10);
     align-items: center;
     color: var(--color10);
 }
-.image-div {
+.image-div {about-me;
+    grid-area:photo;
     width: 100%;
    
 }
 .me-and-cool-title-wrapper {
-    display: flex;
-    flex-direction: row;
-    height: 260px;
-    width: 1000px;
     background-image: url(./images/02-hero-bg.jpg);
     background-size:cover;
     background-repeat: no-repeat;
@@ -82,7 +79,7 @@ color:var(--color10);
     color: var(--color1);
     font-size: 20px;
 }
-/*Styling about me section that contains an h2 title and a paragraph about me*/
+/*Styling about me section that contains an h2 title and a paragraph about me
 .about-me-wrapper {
     background: var(--color1);
     display: flex;
@@ -94,59 +91,62 @@ color:var(--color10);
     color: var(--color10);
     width: 100%;
     font-size: 15px;
+    }*/
+    .cool-header {
+        grid-area: cool-title;
+        background-image: url(../images/02-hero-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .image-div {
+        grid-area: photo;
     }
     .about-me {
-        position: relative;
-        left: 10px;
-        margin-right: 20px;
-        width: 20%;
-        padding: left 20px;
-        font-size: 15px;
-        
+        grid-area: me-side-title;
+        font-size: 10px;
+        color: var(--color10);
+        padding-left: 10px;
+        border-right: 2px solid var(--color10);
     }
     .about-me-para {
-        position: relative;
-        width:800px;
-        border: 1px solid white;
-        right:300px;
-        
-    }
-        .container {
-        height:100%;
-        
-        position: relative;
-        left: 410px;
-        display: grid;
-        grid-template-columns: 40% 40%;
-        grid-template-rows: 40% 40%;
-        grid-template-areas:
-        "#project1  #project2"
-        "#project3 #project4";
-        border: 1px solid white;
-        grid-gap: 10px;
-        
-        grid-column: 10px;
-        max-width: 77vh;
-    
-    }
-    .project-images {
-        padding: 20px;
-        margin-bottom: 5px;
-        padding-left: 20px;
-        position: relative;
-    justify-content: center;
-    align-items: center;
-       
-        height:250px;
-        overflow:hidden;
-       }
-          .projects-header {
-            color: var(--color10);
-            margin-right: 370px;
-          width: 20%;
-          padding-left:20px;
-          font: 15px;
+        grid-area: para;
+        color:var(--color10);
         }
-        
-    
-    
+       
+.projects-header {
+    grid-area: work-header;
+}
+        #project1 {
+    grid-area:project1;
+    width:25%;
+}   
+#project2 {
+    grid-area: project2;
+    width: 25%;
+    }
+#project3 {
+    grid-area: project3;
+}
+#project4 {
+    grid-area: project4;
+    width: 25%;
+
+}
+#project5 {
+    grid-area: project5;
+    width: 25%;
+}
+
+ .contact-me-div {
+    grid-area: contact-me-title;
+ }   
+main {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    'photo photo photo cool-title cool-title'
+    'me-side-title para para para para'
+    'work-header project1 project1 project2 project2'
+    'project3 project3 project4 project4'
+    ;
+}
